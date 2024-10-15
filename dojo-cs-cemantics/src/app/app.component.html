@@ -5,4 +5,15 @@
   </div>
   <p-button (click)="sendMyGuess()">Send</p-button>
   <p-progressBar [value]="myResultDistance" [style]="{ height: '10px' }" />
+  @if (myResultDistance < 20){
+    <label>T'es loin là !</label>
+  } @else if (myResultDistance < 50) {
+    <label>Mouais...</label>
+  } @else if (myResultDistance < 75) {
+    <label>Tu tiens un truc !</label>
+  } @else if (myResultDistance < 100) {
+    <label>Si proche du but !</label>
+  } @else {
+    <label>Félicitations !</label>
+  }
 </div>
