@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    width: 50%
+  }
+
+  button, input, label {
+    margin-bottom: 5%;
+  }
+}
