@@ -3,11 +3,13 @@ import { RouterOutlet } from '@angular/router';
 import {FormsModule} from "@angular/forms";
 import {ApiClientService} from "./service/api-client.service";
 import {HttpClientModule} from "@angular/common/http";
+import {InputTextModule} from "primeng/inputtext";
+import {Button} from "primeng/button";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, HttpClientModule],
+  imports: [RouterOutlet, FormsModule, HttpClientModule, InputTextModule, Button],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   providers: [ApiClientService]

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="form">
     <label>Guess my word :</label>
-    <input type="text" [(ngModel)]="myGuess"/>
+    <input pInputText type="text" [(ngModel)]="myGuess"/>
   </div>
-  <button (click)="sendMyGuess()">Send</button>
+  <p-button (click)="sendMyGuess()">Send</p-button>
 </div>
