@@ -12,9 +12,16 @@
   p-button {
     display: flex;
     justify-content: center;
+    margin-bottom: 15%
   }
 
-  p-button, input, label {
+  input, label {
     margin-bottom: 5%;
+  }
+
+  ::ng-deep {
+    .p-progressbar-label {
+      display:none
+    }
   }
 }

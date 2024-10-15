@@ -5,11 +5,12 @@ import {ApiClientService} from "./service/api-client.service";
 import {HttpClientModule} from "@angular/common/http";
 import {InputTextModule} from "primeng/inputtext";
 import {Button} from "primeng/button";
+import {ProgressBarModule} from "primeng/progressbar";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, HttpClientModule, InputTextModule, Button],
+  imports: [RouterOutlet, FormsModule, HttpClientModule, InputTextModule, Button, ProgressBarModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   providers: [ApiClientService]
@@ -19,9 +20,13 @@ export class AppComponent {
 
   myGuess: string = "";
 
+  myResultDistance = 0
+
   sendMyGuess() {
     this.apiClient.getPokemonByName({
       guess: this.myGuess
-    }).subscribe();
+    }).subscribe(result=> {
+      this.myResultDistance = result.result
+    });
   }
 }
