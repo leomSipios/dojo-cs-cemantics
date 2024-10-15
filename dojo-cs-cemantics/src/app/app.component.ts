@@ -20,6 +20,6 @@ export class AppComponent {
   sendMyGuess() {
     this.apiClient.getPokemonByName({
       guess: this.myGuess
-    });
+    }).subscribe();
   }
 }
